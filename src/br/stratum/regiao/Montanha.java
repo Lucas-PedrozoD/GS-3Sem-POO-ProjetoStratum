@@ -1,6 +1,9 @@
 package br.stratum.regiao;
 
-public class Montanha extends Regiao{
+import br.stratum.interfaces.Monitoramento;
+import br.stratum.interfaces.Projecao;
+
+public class Montanha extends Regiao implements Monitoramento, Projecao {
     private double inclinacao;
     private double saturacaoSolo;
 
@@ -17,6 +20,16 @@ public class Montanha extends Regiao{
             risco = 100;
         }
         return risco;
+    }
+
+    @Override
+    public double monitoramento() {
+        return 0;
+    }
+
+    @Override
+    public double projecao() {
+        return 0;
     }
 
     public double getInclinacao() {

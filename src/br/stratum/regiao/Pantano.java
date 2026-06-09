@@ -1,6 +1,9 @@
 package br.stratum.regiao;
 
-public class Pantano extends Regiao{
+import br.stratum.interfaces.Monitoramento;
+import br.stratum.interfaces.Projecao;
+
+public class Pantano extends Regiao implements Monitoramento, Projecao {
 
     private double nivelDeAgua;
     private double chuvaRecente;
@@ -18,5 +21,15 @@ public class Pantano extends Regiao{
             risco = 100;
         }
         return risco;
+    }
+
+    @Override
+    public double monitoramento() {
+        return 0;
+    }
+
+    @Override
+    public double projecao() {
+        return 0;
     }
 }

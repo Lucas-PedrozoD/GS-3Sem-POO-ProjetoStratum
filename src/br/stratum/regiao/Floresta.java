@@ -1,6 +1,9 @@
 package br.stratum.regiao;
 
-public class Floresta extends Regiao{
+import br.stratum.interfaces.Monitoramento;
+import br.stratum.interfaces.Projecao;
+
+public class Floresta extends Regiao implements Monitoramento, Projecao {
 
     private double securaVegetacao;
     private double temperatura;
@@ -23,5 +26,15 @@ public class Floresta extends Regiao{
         }
 
         return risco;
+    }
+
+    @Override
+    public double monitoramento() {
+        return 0;
+    }
+
+    @Override
+    public double projecao() {
+        return 0;
     }
 }

@@ -11,6 +11,13 @@ public class Satelite {
     ArrayList<Equipamento> equipamentos = new ArrayList<>();
     ArrayList<Evento> eventos = new ArrayList<>();
 
+public double IPO(){
+
+
+
+    return 0;
+}
+
 
 
 }

@@ -1,15 +1,19 @@
 package br.stratum.evento;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 public class Evento {
     private String descricao;
     private int gravidade;
-    private String quando;
+    private LocalDate quandoDia;
+    private LocalTime quandoHora;
 
-
-    public Evento(String descricao, int gravidade, String quando) {
+    public Evento(String descricao, int gravidade, LocalDate quandoDia, LocalTime quandoHora) {
         this.descricao = descricao;
         this.gravidade = gravidade;
-        this.quando = quando;
+        this.quandoDia = quandoDia;
+        this.quandoHora = quandoHora;
     }
 
 
