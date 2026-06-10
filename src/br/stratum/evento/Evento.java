@@ -16,5 +16,30 @@ public class Evento {
         this.quandoHora = quandoHora;
     }
 
+    @Override
+    public String toString() {
+        return quandoDia +
+                " " +
+                quandoHora +
+                " | Gravidade: " +
+                gravidade +
+                " | " +
+                descricao;
+    }
 
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public int getGravidade() {
+        return gravidade;
+    }
+
+    public LocalDate getQuandoDia() {
+        return quandoDia;
+    }
+
+    public LocalTime getQuandoHora() {
+        return quandoHora;
+    }
 }

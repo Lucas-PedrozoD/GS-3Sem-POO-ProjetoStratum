@@ -1,19 +1,34 @@
 package br.stratum.equipamento;
 
-public class Drone extends Equipamento{
+public class Drone extends Equipamento {
+
     private double distanciaPercorrida;
 
-    public Drone(int id, double horasUso, double distanciaPercorrida) {
-        super(id, horasUso);
+    public Drone(double horasUso, double distanciaPercorrida) {
+        super(horasUso);
         this.distanciaPercorrida = distanciaPercorrida;
     }
 
     @Override
     public double calcularDesgaste() {
-        double desgaste = horasUso * 0.5 + distanciaPercorrida * 0.05;
-        if (desgaste > 100){
+
+        double desgaste =
+                getHorasUso() * 0.5 +
+                        distanciaPercorrida * 0.05;
+
+        if (desgaste > 100) {
             desgaste = 100;
         }
-        return desgaste ;
+
+        return desgaste;
+    }
+
+    @Override
+    public String toString() {
+        return "Drone - ID: " + getId();
+    }
+
+    public double getDistanciaPercorrida() {
+        return distanciaPercorrida;
     }
 }
